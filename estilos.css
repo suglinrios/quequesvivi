@@ -4,73 +4,98 @@
 @media(max-width:850px){.desktop-nav{display:none}.hero-layout{grid-template-columns:1fr;gap:0;padding-bottom:55px}.hero-copy{padding-top:30px}.hero-visual{min-height:390px}.hero-visual img{width:390px}.orbit-one{width:320px;height:320px}.orbit-two{width:390px;height:390px}.hero-seal{right:10%;top:15px}.hero-foot{margin-top:25px}.section{padding:72px 0}.story-inner{gap:35px}.order-layout{grid-template-columns:1fr}.order-aside{order:-1}.aside-card{padding:25px}.step{display:inline-flex;width:31%;vertical-align:top;padding-right:8px}.aside-divider,.aside-heart,.aside-signature{display:none}}
 @media(max-width:620px){.container{width:min(100% - 30px,1160px)}.nav-inner{min-height:74px}.brand-copy strong{font-size:21px}.brand-copy small{font-size:8px}.nav-cta{padding:9px 13px}.hero h1{font-size:46px}.hero-visual{min-height:335px}.hero-visual img{width:315px}.orbit-one{width:285px;height:285px}.orbit-two{width:330px;height:330px}.hero-seal{width:79px;height:79px;font-size:8px;right:0}.visual-caption{font-size:16px}.hero-actions{gap:18px}.intro-inner{flex-wrap:wrap;gap:8px 15px;padding:18px 0;font-size:10px}.section-heading{display:block}.section-heading>p{margin-top:18px}.product-grid{grid-template-columns:1fr}.product-art{height:235px}.product-body p{min-height:0}.story-inner{grid-template-columns:1fr;text-align:center;padding:55px 0}.story-symbol{width:210px}.story-symbol>span{font-size:85px}.story-symbol small{bottom:18px}.story-copy p{margin:20px auto}.form-wrap{padding:22px 17px}.form-grid{grid-template-columns:1fr}.upload-head{align-items:start;flex-direction:column;gap:4px}.step{width:100%;display:flex}.aside-card{padding:25px}.footer-inner{align-items:start;flex-direction:column}.footer-links{flex-wrap:wrap;gap:18px}}
 
-/* Logo de Nuestra Esencia igual al del encabezado */
 
+/* ===== LOGO NUESTRA ESENCIA ===== */
+
+/* Círculos exteriores originales */
 .story-symbol {
   width: 260px;
   height: 260px;
   margin: 0 auto;
   padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: none;
+  border: 1px solid #deb6b8;
+  border-radius: 50%;
+  background: transparent;
+}
+
+/* Círculo punteado decorativo */
+.story-symbol::after {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border: 1px dashed #dcb6b8;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Logo QV igual al encabezado */
+.story-symbol > .brand-mark {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  min-width: 175px;
+  margin: 0;
+  padding: 0;
   border: none;
   border-radius: 50%;
   background: transparent;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
 
-/* Reutilizamos el diseño del logo original */
-.story-symbol .brand-mark {
-  width: 220px;
-  height: 220px;
-  min-width: 220px;
-  border: 2px solid #c16b83;
-  border-radius: 50%;
-  background: transparent;
-  color: #b65c78;
-  font-size: 100px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 75px;
+  font-style: normal;
   font-weight: 400;
   line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  letter-spacing: -0.03em;
+  color: #b65c78;
+
+  transform: none;
 }
 
-/* Corazoncito del logo */
-.story-symbol .brand-mark > span {
+/* Corazón pequeño abajo a la derecha */
+.story-symbol > .brand-mark > span {
   position: absolute;
   top: auto;
   left: auto;
-  right: -10px;
-  bottom: -8px;
-  font-size: 35px;
+  right: 16px;
+  bottom: 22px;
+  margin: 0;
+  padding: 0 3px;
+  font-size: 26px;
+  font-style: normal;
   line-height: 1;
   color: #b65c78;
   background: #f8e9e6;
-  padding: 0 5px;
   border-radius: 50%;
   transform: none;
 }
 
-/* Adaptación para celulares */
+/* Celulares */
 @media (max-width: 768px) {
   .story-symbol {
     width: 220px;
     height: 220px;
   }
 
-  .story-symbol .brand-mark {
-    width: 190px;
-    height: 190px;
-    min-width: 190px;
-    font-size: 85px;
+  .story-symbol > .brand-mark {
+    width: 155px;
+    height: 155px;
+    min-width: 155px;
+    font-size: 65px;
   }
 
-  .story-symbol .brand-mark > span {
-    right: -8px;
-    bottom: -6px;
-    font-size: 28px;
+  .story-symbol > .brand-mark > span {
+    right: 14px;
+    bottom: 19px;
+    font-size: 23px;
   }
 }
+

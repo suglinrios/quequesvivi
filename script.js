@@ -1,6 +1,6 @@
 // IMPORTANTE: colocá aquí el número de WhatsApp del negocio con código de país.
 // Ejemplo para Costa Rica: "50688888888" (sin +, espacios ni guiones).
-const WHATSAPP_NEGOCIO = "";
+const WHATSAPP_NEGOCIO = "50683501265";
 
 const form = document.getElementById('orderForm');
 const fileInput = document.getElementById('referencia');
